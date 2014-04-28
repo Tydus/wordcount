@@ -6,7 +6,7 @@ import trie
 def main():
     t = trie.Trie()
     for i in sys.stdin:
-        t.insert(i.strip())
+        t.insert(i.strip().lower())
 
     print t
 
