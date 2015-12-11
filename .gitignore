@@ -1,2 +1,5 @@
 *~
 *.pyc
+*.swp
+wordcount-native
+enwik8-ascii.txt
