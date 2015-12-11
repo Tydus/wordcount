@@ -1,13 +1,11 @@
-
 Benchmark results of enwik8-ascii.txt
 
-trie: 0m58.059s
-shipped(hash+sort): 0m6.517s
+native trie: 13.10s
+shipped(hash+sort): 100.21s
+trie: more than 300s
 
 My trie is ~10x slower than shipped implementations (in C).
 
-TODO: implement trie in C and try re-benchmark
-
 Ps:
 how to extract ascii words from enwik8
-grep -o "[a-zA-Z]*" enwik8 | grep -Pv "[\x80-\xFF]" > enwik8-ascii.txt
+LC_ALL=C grep -o "[a-zA-Z]*" enwik8 > enwik8-ascii.txt
